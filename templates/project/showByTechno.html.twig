@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="container-fluid project-container">
+    <a href="{{ '/' }}"><button class="home-button"> ← Retour à l'accueil</button></a>
+    <a href="{{ '/9' }}"><button class="techno-link">Architecture MVC</button></a>
+    <a href="{{ '/5' }}"><button class="techno-link">Bootstrap</button></a>
+    <a href="{{ '/1' }}"><button class="techno-link">Php</button></a>
+    <a href="{{ '/3' }}"><button class="techno-link">Symfony</button></a>
+    <a href="{{ '/11' }}"><button class="techno-link">Twig</button></a>
+    <a href="{{ '/10' }}"><button class="techno-link">Wordpress</button></a>
+</div>
+
+<div class="container-fluid">
+    <div class="row project-cards">
+        {% for project in projects %}
+        <div class="card-body col-lg-3">
+            <div class="card">
+            <img class="card-img-top" src="{{ project.pictures[0].url }}" alt="{{ project.title }}"><button type="button" class="btn btn-light read-more" data-toggle="modal"
+            data-target="#modal-{{project.id}}">En savoir plus</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% for project in projects %}
+<div class="modal" id="modal-{{project.id}}" tabindex="-1" aria-labelledby="modal-{{project.id}}" aria-hidden="true" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{project.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {% if project.github %}<a href="{{ project.github|striptags }}" target="_blank"><button class="github-button">Dépôt Github</button></a>{% endif %}
+        {% if project.onlineUrl %}<a href="{{ project.onlineUrl|striptags }}" target="_blank"><button class="url-button">Site en ligne</button></a>{% endif %}
+        <p>{{ project.description|striptags }}</p>
+        <h5>Set technique</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

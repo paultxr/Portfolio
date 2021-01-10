@@ -2,11 +2,201 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Paul Texier - Développeur Web</title>
+ 
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="build/app.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <!-- Wrapper -->
+<div class="wrapper">
+ 
+    <!-- Sidebar -->
+    <nav class="sidebar">
+ 
+        <!-- close sidebar menu -->
+        <div class="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+ 
+        <div class="logo">
+            <img src="https://www.zupimages.net/up/21/01/tv9r.jpeg" class="pp" width="150" height="150px">
+        </div>
+ 
+        <ul class="list-unstyled menu-elements">
+            <li>
+                <a href="{{ '/' }}"><i class="fas fa-cog"></i> Mes projets</a>
+            </li>
+            <li>
+                <a href="{{ 'aboutme' }}"><i class="fas fa-user"></i> À propos de moi</a>
+            </li>
+            <li>
+                <a href="http://myreader.toile-libre.org/cvPaulTexier.pdf" target="_blank"><i class="fas fa-pencil-alt"></i> Mon CV</a>
+            </li>
+            <li>
+                <a href="{{ 'contact' }}"><i class="fas fa-envelope"></i> Me contacter</a>
+            </li>
+            <li>
+                <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+                    <i class="fas fa-sync"></i>Mes réseaux
+                </a>
+                <ul class="collapse list-unstyled" id="otherSections">
+                    <li>
+                        <a href="https://github.com/paultxr" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/paul-texier/" target="_blank">LinkedIn</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+ 
+        <div class="to-top">
+            <a class="btn btn-primary btn-customized-3" href="#" role="button">
+                <i class="fas fa-arrow-up"></i> Top
+            </a>
+        </div>
+ 
+        {# <div class="dark-light-buttons">
+            <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+            <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+        </div>
+  #}
+    </nav>
+    <!-- End sidebar -->
+ 
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+ 
+    <!-- Content -->
+    <div class="content">
+ 
+        <!-- open sidebar menu -->
+        <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+            <i class="fas fa-align-left"></i> <span>Menu</span>
+        </a>
+ 
+        <!-- ... -->
+ 
+        <!-- here is the page's content (not shown here) -->
+ 
+        <!-- ... -->
+ 
+    </div>
+    <!-- End content -->
+ 
+</div>
+<!-- End wrapper -->
         {% block body %}{% endblock %}
+             <!-- Javascript -->
+
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            </body>
+
+         <script>jQuery(document).ready(function() {
+ 
+            $('.dismiss, .overlay').on('click', function() {
+                $('.sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+         
+            $('.open-menu').on('click', function(e) {
+                e.preventDefault();
+                $('.sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                // close opened sub-menus
+                $('.collapse.show').toggleClass('show');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+         
+            /* other code */
+         
+        });
+        
+        /*
+            Navigation
+        */
+        $('a.scroll-link').on('click', function(e) {
+            e.preventDefault();
+            scroll_to($(this), 0);
+        });
+         
+        function scroll_to(clicked_link, nav_height) {
+            var element_class = clicked_link.attr('href').replace('#', '.');
+            var scroll_to = 0;
+            if(element_class != '.top-content') {
+                element_class += '-container';
+                scroll_to = $(element_class).offset().top - nav_height;
+            }
+            if($(window).scrollTop() != scroll_to) {
+                $('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+            }
+        }
+        
+        $('.to-top a').on('click', function(e) {
+            e.preventDefault();
+            if($(window).scrollTop() != 0) {
+                $('html, body').stop().animate({scrollTop: 0}, 1000);
+            }
+        });
+        
+        $('a.btn-customized-dark').on('click', function(e) {
+            e.preventDefault();
+            $('.sidebar').removeClass('light');
+        });
+         
+        $('a.btn-customized-light').on('click', function(e) {
+            e.preventDefault();
+            $('.sidebar').addClass('light');
+        });
+        
+        $('.section-container').waypoint(function(direction) {
+            if (direction === 'down') {
+                $('.menu-elements li').removeClass('active');
+                $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+            }
+        },
+        {
+            offset: '0'
+        });
+         
+        $('.section-container').waypoint(function(direction) {
+            if (direction === 'up') {
+                $('.menu-elements li').removeClass('active');
+                $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+            }
+        },
+        {
+            offset: '-5'
+        });
+        
+        $('.sidebar').mCustomScrollbar({
+            theme: "minimal-dark"
+        });</script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
